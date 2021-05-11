@@ -31,4 +31,12 @@ class IndexControllerTest {
                 "Message to build" +
                 "for my test");
     }
+
+    @Test
+    @DisplayName("Test throws exception")
+    void oupsHandler2() {
+        assertThrows(RuntimeException.class, () -> {
+            indexController.oopsHandler2();
+        });
+    }
 }
