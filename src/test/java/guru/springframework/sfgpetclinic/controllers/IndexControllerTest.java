@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.*;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
@@ -23,6 +24,8 @@ class IndexControllerTest {
         assertEquals("index", indexController.index(), "Successful");
         assertNotEquals("index2", indexController.index(), () ->
                 "For this input the method execution fails");
+
+        assertThat(indexController.index()).isEqualTo("index");
     }
 
     @DisplayName("Test exception")
