@@ -1,11 +1,16 @@
 package guru.springframework.junit4legacy.controllers;
 
-import org.junit.Before;
-import org.junit.Test;
+/*
+JUnit4 import org.junit.Before;
+import org.junit.Test; */
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class IndexControllerTest {
 
-    @Before
+    // @Before JUnit4
+    @BeforeEach
     public void setUp() throws Exception {
     }
 
